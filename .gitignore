@@ -1,0 +1,4 @@
+.vagrant
+wordpress/*
+!wordpress/wp-content
+!wordpress/wp-content/*
