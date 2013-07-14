@@ -15,7 +15,7 @@ Download and extract [wordpress-theme-dev](https://github.com/olorton/wordpress-
 vagrant up
 ```
 
-This will boot up and configure an ubuntu server virtual machine on the ip ```192.168.10.33```
+This will boot up and configure an ubuntu server virtual machine on the ip ```http://192.168.10.33```
 
 You will need to run the wordpress setup by navigating to that ip in your browser. Use the following details to set up to the database.
 
@@ -26,3 +26,9 @@ You will need to run the wordpress setup by navigating to that ip in your browse
 * Table Prefix: (whatever you like, or leave default)
 
 The wordpress themes directory is located here: wordpress/wp-content/themes
+
+## PHPMyAdmin
+
+```http://192.168.10.33/phpmyadmin```
+
+PHPMyAdmin has been included to allow uploading of existing wordpress databases.

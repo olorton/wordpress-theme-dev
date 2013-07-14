@@ -4,6 +4,7 @@ include_recipe "php"
 include_recipe "php::module_gd"
 include_recipe "php::module_mysql"
 include_recipe "nginx"
+package "phpmyadmin"
 
 service "php5-fpm" do
   supports :status => true, :restart => true, :reload => true
@@ -54,4 +55,8 @@ end
 
 execute "add wordpress database" do
   command "mysql -u root -e 'CREATE DATABASE IF NOT EXISTS wordpress'"
+end
+
+execute "allow phpmyadmin login without a password" do
+  command "sudo sed -i '/^.*AllowNoPassword.*/ s|//||' /etc/phpmyadmin/config.inc.php"
 end
